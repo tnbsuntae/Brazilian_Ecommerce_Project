@@ -13,7 +13,6 @@ WITH order_date AS (
 )
 
 SELECT
-    order_id,
     order_purchase_timestamp,
     order_delivered_carrier_date,
     order_delivered_customer_date,

@@ -52,7 +52,6 @@ WITH order_product AS (
 )
 
 SELECT
-    sales_rank,
     year,
     quarter,
     product_category_name,
