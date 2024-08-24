@@ -56,7 +56,7 @@ SELECT
     ma_all_delivery.quarter,
     ma_late_delivey.late_count,
     ma_all_delivery.delivery_count,
-    ma_late_delivey.late_count * 100 / ma_all_delivery.delivery_count AS late_percentage
+    TO_CHAR((ma_late_delivey.late_count * 100.0 / ma_all_delivery.delivery_count), 'FM999.00') || '%' AS late_percentage
 FROM
     ma_all_delivery
 LEFT JOIN ma_late_delivey

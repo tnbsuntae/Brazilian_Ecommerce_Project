@@ -37,7 +37,7 @@ SELECT
     late_delivery.seller_state,
     late_delivery.late_count,
     delivery.delivery_count,
-    late_delivery.late_count * 100 / delivery.delivery_count AS late_percentage
+    ROUND(late_delivery.late_count * 100.0 / delivery.delivery_count, 2) AS late_percentage
 FROM
     late_delivery
 LEFT JOIN delivery
