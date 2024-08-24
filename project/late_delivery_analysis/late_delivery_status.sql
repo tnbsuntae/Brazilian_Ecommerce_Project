@@ -5,7 +5,7 @@ SELECT
     CASE
         WHEN order_delivered_customer_date > order_estimated_delivery_date THEN TRUE
         ELSE FALSE
-    END AS late_delivery
+    END AS is_late_delivery
 FROM 
     olist_orders_dataset
 WHERE

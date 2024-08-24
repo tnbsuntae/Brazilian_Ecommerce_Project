@@ -45,32 +45,6 @@ CREATE TABLE public.olist_sellers_dataset
     seller_state VARCHAR(50)
 );
 
--- Create olist_customers_dataset table with primary key
-CREATE TABLE public.olist_order_payments_dataset
-(
-    order_id VARCHAR(255),
-    payment_sequential VARCHAR(255),
-    payment_type VARCHAR(50),
-    PRIMARY KEY (order_id, payment_sequential),
-    payment_installments INT,
-    payment_value NUMERIC,
-    FOREIGN KEY (order_id) REFERENCES public.olist_orders_dataset (order_id)
-);
-
--- Create olist_order_reviews_dataset table with primary key
-CREATE TABLE public.olist_order_reviews_dataset
-(
-    review_id VARCHAR(255),
-    order_id VARCHAR(255),
-    PRIMARY KEY (review_id, order_id),
-    review_score INT,
-    review_comment_title TEXT,
-    review_comment_message TEXT,
-    review_creation_date TIMESTAMP,
-    review_answer_timestamp TIMESTAMP,
-    FOREIGN KEY (order_id) REFERENCES public.olist_orders_dataset (order_id)
-);
-
 -- Create olist_order_items_dataset table with primary key
 CREATE TABLE public.olist_order_items_dataset
 (
@@ -96,10 +70,8 @@ CREATE TABLE public.product_category_name_translation
 
 -- Set ownership of the tables to the postgres user
 ALTER TABLE public.olist_customers_dataset OWNER to postgres;
-ALTER TABLE public.olist_order_payments_dataset OWNER to postgres;
 ALTER TABLE public.olist_products_dataset OWNER to postgres;
 ALTER TABLE public.olist_sellers_dataset OWNER to postgres;
-ALTER TABLE public.olist_order_reviews_dataset OWNER to postgres;
 ALTER TABLE public.olist_orders_dataset OWNER to postgres;
 ALTER TABLE public.olist_order_items_dataset OWNER to postgres;
 ALTER TABLE public.product_category_name_translation OWNER to postgres;

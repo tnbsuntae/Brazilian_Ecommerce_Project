@@ -62,6 +62,6 @@ FROM
     rank_of_product
 WHERE
     year <> '2016'
-    AND sales_rank <= 5
+    AND sales_rank <= 3
 ORDER BY
     year, quarter, sales_rank

@@ -15,13 +15,9 @@ NOTE: If you are having issues with permissions. And you get error:
 
 \copy olist_customers_dataset FROM '/Users/suntaetangsatgatham/suntae/kaggle/brazilian_ecom_project/dataset/olist_customers_dataset.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
-\copy olist_order_payments_dataset FROM '/Users/suntaetangsatgatham/suntae/kaggle/brazilian_ecom_project/dataset/olist_order_payments_dataset.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
-
 \copy olist_products_dataset FROM '/Users/suntaetangsatgatham/suntae/kaggle/brazilian_ecom_project/dataset/olist_products_dataset.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
 \copy olist_sellers_dataset FROM '/Users/suntaetangsatgatham/suntae/kaggle/brazilian_ecom_project/dataset/olist_sellers_dataset.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
-
-\copy olist_order_reviews_dataset FROM '/Users/suntaetangsatgatham/suntae/kaggle/brazilian_ecom_project/dataset/olist_order_reviews_dataset.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
 \copy olist_orders_dataset FROM '/Users/suntaetangsatgatham/suntae/kaggle/brazilian_ecom_project/dataset/olist_orders_dataset.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
@@ -34,20 +30,12 @@ COPY olist_customers_dataset
 FROM '/Users/suntaetangsatgatham/suntae/kaggle/brazilian_ecom_project/dataset/olist_customers_dataset.csv'
 WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
-COPY olist_order_payments_dataset
-FROM '/Users/suntaetangsatgatham/suntae/kaggle/brazilian_ecom_project/dataset/olist_order_payments_dataset.csv'
-WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
-
 COPY olist_products_dataset
 FROM '/Users/suntaetangsatgatham/suntae/kaggle/brazilian_ecom_project/dataset/olist_products_dataset.csv'
 WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
 COPY olist_sellers_dataset
 FROM '/Users/suntaetangsatgatham/suntae/kaggle/brazilian_ecom_project/dataset/olist_sellers_dataset.csv'
-WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
-
-COPY olist_order_reviews_dataset
-FROM '/Users/suntaetangsatgatham/suntae/kaggle/brazilian_ecom_project/dataset/olist_order_reviews_dataset.csv'
 WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
 COPY olist_orders_dataset
