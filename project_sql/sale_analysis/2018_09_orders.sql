@@ -1,23 +1,9 @@
-WITH order_date AS (
-    SELECT
-        order_id,
-        order_status,
-        order_purchase_timestamp,
-        EXTRACT(MONTH FROM order_purchase_timestamp) AS month,
-        EXTRACT(YEAR FROM order_purchase_timestamp) AS year,
-        order_delivered_carrier_date,
-        order_delivered_customer_date,
-        order_estimated_delivery_date
-    FROM 
-        olist_orders_dataset
-)
 
 SELECT
-    order_purchase_timestamp,
-    order_delivered_carrier_date,
-    order_delivered_customer_date,
-    order_estimated_delivery_date
+    COUNT(CASE WHEN order_delivered_customer_date IS NOT NULL THEN 1 END) AS delivered_order,
+    COUNT(order_purchase_timestamp) AS ongoing_order
 FROM 
-    order_date
+    olist_orders_dataset
 WHERE
-    year = 2018 AND month = 9
+    EXTRACT(MONTH FROM order_purchase_timestamp) = 9
+    AND EXTRACT(YEAR FROM order_purchase_timestamp) = 2018
