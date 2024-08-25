@@ -10,21 +10,27 @@ WITH late_by_month AS (
         olist_orders_dataset
     WHERE
         order_status = 'delivered'
+), late_by_qt AS (
+    SELECT
+        year,
+        CASE
+            WHEN month <= 3 THEN 'Q1'
+            WHEN month <= 6 THEN 'Q2'
+            WHEN month <= 9 THEN 'Q3'
+            ELSE 'Q4'
+        END AS quarter,
+        COUNT(is_late_delivery) AS late_count
+    FROM
+        late_by_month
+    WHERE
+        is_late_delivery = TRUE
+    GROUP BY
+        year, quarter
+    ORDER BY
+        year, quarter
 )
 SELECT
-    year,
-    CASE
-        WHEN month <= 3 THEN 'Q1'
-        WHEN month <= 6 THEN 'Q2'
-        WHEN month <= 9 THEN 'Q3'
-        ELSE 'Q4'
-    END AS quarter,
-    COUNT(is_late_delivery) AS late_count
+    CONCAT(year, ' ', quarter) AS quarter,
+    late_count
 FROM
-    late_by_month
-WHERE
-    is_late_delivery = TRUE
-GROUP BY
-    year, quarter
-ORDER BY
-    year, quarter
+    late_by_qt

@@ -52,8 +52,7 @@ WITH order_product AS (
 )
 
 SELECT
-    year,
-    quarter,
+    CONCAT(year, ' ', quarter) AS quarter,
     product_category_name,
     product_category_name_english,
     product_count

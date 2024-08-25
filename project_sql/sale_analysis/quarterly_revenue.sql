@@ -23,8 +23,7 @@ WITH order_date AS (
         order_date
 )
 SELECT
-    year,
-    quarter,
+    CONCAT(year, ' ', quarter) AS quarter,
     SUM(order_value) AS quarterly_revenue
 FROM
     quaterly_order

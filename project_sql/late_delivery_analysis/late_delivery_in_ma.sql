@@ -52,8 +52,7 @@ WITH late_by_month AS (
         year, quarter
 )
 SELECT
-    ma_all_delivery.year,
-    ma_all_delivery.quarter,
+    CONCAT(ma_all_delivery.year, ' ', ma_all_delivery.quarter) AS quarter,
     ma_late_delivey.late_count,
     ma_all_delivery.delivery_count,
     TO_CHAR((ma_late_delivey.late_count * 100.0 / ma_all_delivery.delivery_count), 'FM999.00') || '%' AS late_percentage

@@ -42,12 +42,7 @@ WITH order_product_status AS (
         order_weight,order_size
 )
 SELECT
-    CASE
-        WHEN order_weight = 'heavy' AND order_size = 'large' THEN 'heavy and large'
-        WHEN order_weight = 'heavy' AND order_size = 'small' THEN 'heavy and small'
-        WHEN order_weight = 'light' AND order_size = 'large' THEN 'light and large'
-        ELSE 'light and small'
-    END AS order_category,
+    CONCAT(order_weight, ' and ', order_size) AS order_category,
     late_count
 FROM
     product_cls
