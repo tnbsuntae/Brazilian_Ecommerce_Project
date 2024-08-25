@@ -47,7 +47,20 @@ The database contains only 16 ongoing orders and no completed shipments for Sept
 | On-going     |16       |
 | Delivered    |0        |
 
-_Table indicate the number of orders in September 2018_
+_Table indicating the number of orders in September 2018_
+
+The top three best-selling product categories for each quarter were examined to determine if there are any indications of seasonality over the seven quarters from Q1 2017 to Q3 2018. Data from 2016 was not considered in this analysis due to the relatively low revenue in that year, which would not provide meaningful insights when compared to the following two years.
+
+Based on the visualization of the quarterly reports, there is no clear indication of seasonality due to the diversity of best-selling products in each quarter. However, some trends are observable for specific product categories:
+
+- Products in the "bed bath table" category consistently performed well across all quarters. This suggests that further exploration into this category could provide valuable insights and help develop strategies to strengthen product offerings.
+- Throughout 2017, the "sport leisure" category garnered significant interest from customers. It could be beneficial to analyze which specific products were most popular and whether these products are associated with any events during that period. This information could help the company plan special campaigns aligned with relevant events.
+- The "health and beauty" category showed increased attention in the first half of 2018. Investigating market trends related to this category could reveal factors such as product launches by specific brands or celebrity endorsements that influenced consumer behavior, providing opportunities to capitalize on these trends.
+
+🔍 Check the query of this analysis here: [Best Seller Categories](/project_sql/sale_analysis/top_categories.sql)
+
+![alt text](asset/top_categories_by_quarter.png)
+_Bar graph visualizing the top three best seller categories in each quarter_
 # What I Learned
 
 # Conclusion
