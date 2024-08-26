@@ -27,7 +27,7 @@ The analysis reveals a significant increase in revenue throughout 2017 and the f
 🔍 Check the query of this analysis here: [quarterly revenue](/project_sql/sale_analysis/quarterly_revenue.sql)
 
 ![alt text](asset/quarterly_revenue.png)
-_Line graph visualizing quarterly revenue from 2016 Q3 to 2018 Q3_
+_Time series graph visualizing quarterly revenue from 2016 Q3 to 2018 Q3_
 
 To gain a deeper understanding of the decline observed in the third quarter of 2018, the monthly revenue for this period was closely examined.
 
@@ -61,6 +61,63 @@ Based on the visualization of the quarterly reports, there is no clear indicatio
 
 ![alt text](asset/top_categories_by_quarter.png)
 _Bar graph visualizing the top three best seller categories in each quarter_
+
+### Late Delivery Analysis
+Given the high volume of orders and revenue, late deliveries are a significant concern that needs to be addressed. As such, this issue is a key topic for analysis.
+
+From the complete dataset, only 8.11% of orders were delivered late, which is relatively low considering the total number of orders. However, further exploration is warranted to gain deeper insights into this behavior.
+
+🔍 Check the query of this analysis here: [Late Delivery Percentage](/project_sql/late_delivery_analysis/late_delivery_status.sql)
+
+| Late Delivery Count |  Total Order Count  | Late Delivery Percentage|
+|:------------:|:----------:|:---------:|
+| 7826         |96478       |8.11%      |
+
+_Table indicates the number and percentage of late delivery orders_
+
+The time series graph below indicates a quarterly increase in the number of late delivery orders, which aligns with the substantial growth in revenue during this timeframe. However, there is a noticeable decrease in the number of late deliveries in Q2 of 2018. The data for Q3 of 2018 will not be considered in the analysis because the data for September 2018 is incomplete.
+
+🔍 Check the query of this analysis here: [Late Delivery by quarter](/project_sql/late_delivery_analysis/late_delivery_by_quarter.sql)
+
+![alt text](asset/late_count_by_quarter.png)
+_Time series graph visualizing the number of late deliveries in each quarter_
+
+The percentage of late delivery orders in each state in Brazil was analyzed to determine if any state had a significantly higher rate than the others.
+
+As shown in the bar graph below, Maranhão stands out with the highest percentage of late delivery orders at 23.63%, while other states only have single-digit percentages.
+
+![alt text](asset/late_by_state.png)
+_Bar graph visualizing the number of late delivery percentage by state_
+
+The table below shows that the percentage of late deliveries in Maranhão increased from Q1 to Q2 of 2018, but then sharply decreased in Q3. This suggests an improvement in addressing the issue, as the total number of orders rose from 137 to 234, while the count of late orders dropped from 53 to 35.
+
+| Quarter       |  Late Order Count  | Total Order| Late Delivery Percentage | 
+|:------------:|:-------------------:|:----------:|:------------------------:|
+| 2018 Q1      |7                    |31          |22.58%                    |
+| 2018 Q2      |53                   |137         |38.69%                    |
+| 2018 Q3      |35                   |234         |14.96%                    |
+
+_Table indicates the percentage of late delivery order compare to the total orders in Maranhão_
+
+Curious to see if the size and weight of an order affect delivery time, a further analysis was conducted by categorizing orders into four groups: light and small, heavy and small, heavy and large, and light and large.
+
+As shown in the bar graph below, the majority of late deliveries fall into the "light and small" category. This suggests that the initial assumption was incorrect, and larger or heavier orders may not significantly impact late deliveries.
+
+![alt text](asset/late_product_size.png)
+_Bar graph visualizing the late delivery count categorize by size of order_
+
 # What I Learned
+Through the analysis of ecommerce sales data, I uncovered several key factors affecting business performance. The revenue data indicated a substantial growth trend throughout 2017 and into the first half of 2018, followed by a significant decline in the third quarter of 2018. This drop in revenue was partly attributed to missing data for September 2018, making it difficult to fully assess performance for that quarter.
+
+Examining best-selling product categories across multiple quarters revealed no clear seasonality, although consistent demand for certain categories, such as "bed bath table," suggests opportunities for targeted strategies. Seasonal interest in other categories, like "sport leisure" and "health and beauty," highlights the importance of aligning marketing efforts with market trends and events.
+
+The analysis of late deliveries showed that while the overall percentage of late orders was relatively low, there was a trend of increasing late deliveries alongside rising order volumes. However, there was a notable improvement in late delivery rates in Maranhão during Q3 of 2018, suggesting effective interventions.
+
+Lastly, the investigation into whether the size and weight of orders influenced delivery times revealed that most late deliveries were in the "light and small" category, contradicting the initial assumption that heavier or larger items would be more prone to delays. This finding suggests that other factors, such as logistical inefficiencies, may be contributing to late deliveries.
 
 # Conclusion
+This research aimed to analyze ecommerce sales data to identify key factors influencing business performance and customer satisfaction. The analysis revealed significant insights into revenue growth patterns, product category trends, and delivery performance. While revenue showed strong growth through 2017 and early 2018, a notable decline in Q3 2018 highlighted data gaps and potential operational challenges.
+
+Further investigation into best-selling products did not indicate a clear seasonal pattern but suggested strategic opportunities in consistently high-performing categories. The analysis of late deliveries underscored the importance of addressing delivery logistics, especially in states like Maranhão, where late delivery rates were notably higher.
+
+Overall, the findings provide a comprehensive view of the ecommerce platform's performance, highlighting areas for strategic focus and improvement to enhance business outcomes and customer experience. Moving forward, addressing data completeness and refining logistical operations will be critical in sustaining growth and ensuring customer satisfaction.
