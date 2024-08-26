@@ -1,7 +1,7 @@
 # Introduction
 📊 This project analyzes Brazilian e-commerce data from 2016 to 2018, focusing on two main areas: sales trends 📈 and delivery performance 🚚. The sales analysis examines quarterly revenue to identify growth patterns and the top-selling products each quarter 🛍️. The delivery analysis investigates late deliveries to uncover potential areas for operational improvement 🔍. This study aims to provide valuable insights into both market trends and service efficiency ✨.
 
-🔍 SQL queries? Check them out here: [project folder](/project_sql/)
+🔍 SQL queries? Check them out here: [Project folder](/project_sql/)
     
 # Backgroud
 Brazil's e-commerce market has experienced significant growth 📊 over the past few years, becoming one of the largest in Latin America. With the rapid expansion of online shopping 🛒, understanding sales trends and delivery performance is crucial for businesses looking to optimize their operations and enhance customer satisfaction. This dataset, sourced from Kaggle 📚, provides a comprehensive look at e-commerce transactions from 2016 to 2018, including detailed information on orders, products, customers, and logistics 🚚.
@@ -24,7 +24,7 @@ Initially, the quarterly revenue of the entire ecommerce platform was examined t
 
 The analysis reveals a significant increase in revenue throughout 2017 and the first half of 2018. However, there is a notable decline in the third quarter of 2018, with revenue dropping sharply from approximately 3.7 million to 2.2 million.
 
-🔍 Check the query of this analysis here: [quarterly revenue](/project_sql/sale_analysis/quarterly_revenue.sql)
+🔍 Check the query of this analysis here: [Quarterly Revenue](/project_sql/sale_analysis/quarterly_revenue.sql)
 
 ![alt text](asset/quarterly_revenue.png)
 _Time series graph visualizing quarterly revenue from 2016 Q3 to 2018 Q3_
@@ -86,10 +86,14 @@ The percentage of late delivery orders in each state in Brazil was analyzed to d
 
 As shown in the bar graph below, Maranhão stands out with the highest percentage of late delivery orders at 23.63%, while other states only have single-digit percentages.
 
+🔍 Check the query of this analysis here: [Late Delivery by state](/project_sql/late_delivery_analysis/late_delivery_by_state.sql)
+
 ![alt text](asset/late_by_state.png)
 _Bar graph visualizing the number of late delivery percentage by state_
 
 The table below shows that the percentage of late deliveries in Maranhão increased from Q1 to Q2 of 2018, but then sharply decreased in Q3. This suggests an improvement in addressing the issue, as the total number of orders rose from 137 to 234, while the count of late orders dropped from 53 to 35.
+
+🔍 Check the query of this analysis here: [Late Delivery in Maranhão](/project_sql/late_delivery_analysis/late_delivery_in_ma.sql)
 
 | Quarter       |  Late Order Count  | Total Order| Late Delivery Percentage | 
 |:------------:|:-------------------:|:----------:|:------------------------:|
@@ -102,6 +106,8 @@ _Table indicates the percentage of late delivery order compare to the total orde
 Curious to see if the size and weight of an order affect delivery time, a further analysis was conducted by categorizing orders into four groups: light and small, heavy and small, heavy and large, and light and large.
 
 As shown in the bar graph below, the majority of late deliveries fall into the "light and small" category. This suggests that the initial assumption was incorrect, and larger or heavier orders may not significantly impact late deliveries.
+
+🔍 Check the query of this analysis here: [Late Delivery by order size](/project_sql/late_delivery_analysis/late_delivery_by_product_size.sql)
 
 ![alt text](asset/late_product_size.png)
 _Bar graph visualizing the late delivery count categorize by size of order_
