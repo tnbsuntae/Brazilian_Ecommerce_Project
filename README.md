@@ -1,7 +1,9 @@
 # Introduction
 📊 This project analyzes Brazilian e-commerce data from 2016 to 2018, focusing on two main areas: sales trends 📈 and delivery performance 🚚. The sales analysis examines quarterly revenue to identify growth patterns and the top-selling products each quarter 🛍️. The delivery analysis investigates late deliveries to uncover potential areas for operational improvement 🔍. This study aims to provide valuable insights into both market trends and service efficiency ✨.
 
-🔍 SQL queries? Check them out here: [Project folder](/project_sql/)
+🔍 Check the SQL queries here: [Project Folder](/project_sql/)
+
+🔍 Check the dataset from Kaggle here: [Dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
     
 # Backgroud
 Brazil's e-commerce market has experienced significant growth 📊 over the past few years, becoming one of the largest in Latin America. With the rapid expansion of online shopping 🛒, understanding sales trends and delivery performance is crucial for businesses looking to optimize their operations and enhance customer satisfaction. This dataset, sourced from Kaggle 📚, provides a comprehensive look at e-commerce transactions from 2016 to 2018, including detailed information on orders, products, customers, and logistics 🚚.
